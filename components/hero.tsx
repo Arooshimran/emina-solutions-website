@@ -33,9 +33,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-[#1a1a7a] to-background" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d55] via-[#1a1a7a] to-[#0d0d55]" />
       
       {/* Animated accent circles */}
       <motion.div
