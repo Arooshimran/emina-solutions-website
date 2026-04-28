@@ -60,7 +60,8 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.0, delay: 1.6, ease: 'easeOut' }}
         >
-Web Development • E-Commerce Development • SaaS Product Engineering • AI Integration • BPO & Remote Operations • Digital Transformation Services        </motion.p>
+          Operations • Creative • Technology
+        </motion.p>
 
         {/* CTA buttons */}
         <motion.div
