@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'Emina Solutions is a modern business process outsourcing (BPO) and digital transformation agency. We specialize in staff augmentation, SaaS product engineering, AI integration, CRM automation, content writing, and scalable remote operations.',
     icons: {
       icon: [
-        { url: '/emina_logo_cropped.png' }, // primary
+        { url: '/emina-small-logo.png' }, // primary
       ],
       apple: '/apple-icon.png',
     },
