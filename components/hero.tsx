@@ -4,113 +4,75 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: 'easeOut',
-      },
-    },
-  };
-
   const scrollToServices = () => {
-    const element = document.getElementById('services');
-    element?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d55] via-[#1a1a7a] to-[#0d0d55]" />
-      
-      {/* Animated accent circles */}
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0d0d55]">
+
+      {/* Floating blobs */}
       <motion.div
         className="absolute top-20 left-10 w-64 h-64 rounded-full bg-primary/10 blur-3xl"
-        animate={{
-          y: [0, 20, 0],
-          opacity: [0.1, 0.2, 0.1],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+        animate={{ y: [0, 20, 0], opacity: [0.1, 0.2, 0.1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
         className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-accent/5 blur-3xl"
-        animate={{
-          y: [0, -25, 0],
-          opacity: [0.05, 0.15, 0.05],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+        animate={{ y: [0, -25, 0], opacity: [0.05, 0.15, 0.05] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
 
-      {/* Content */}
-      <motion.div
-        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Badge */}
-        <motion.div variants={itemVariants} className="mb-6">
-          <div className="inline-block px-4 py-2 rounded-full bg-primary/20 border border-primary/40 text-primary">
-            <span className="text-sm font-medium">Welcome to Emina Solutions</span>
-          </div>
-        </motion.div>
+      <div className="relative z-10 flex flex-col items-center text-center px-4">
 
-        {/* Main Heading */}
+        {/* LOGO */}
+        <motion.img
+          src="/emina_logo_cropped.png"
+          alt="Emina Solutions - Web Development, Software Development, E-commerce & Digital Transformation Company"
+          style={{ width: 'clamp(220px, 40vw, 420px)', height: 'auto' }}
+          initial={{ opacity: 0, y: 16, filter: 'blur(6px)' }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+        />
+
+        {/* SEO H1 (NO visual change, same style) */}
         <motion.h1
-          variants={itemVariants}
-          className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6"
+          className="mt-0 text-transparent"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0 }}
         >
-          <span className="text-white">Your Partner in</span>{' '}
-          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Digital Transformation
-          </span>
+          Emina Solutions – Web Development, E-Commerce, Software & Digital Transformation Services
         </motion.h1>
 
-        {/* Subheading */}
-        <motion.p
-          variants={itemVariants}
-          className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
-        >
-          Scaling remote operations and delivering premium managed services. From strategic staff augmentation to cutting-edge AI integration, we empower enterprises to thrive.
-        </motion.p>
-
-        {/* CTA Buttons */}
+        {/* Divider */}
         <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="h-px bg-linear-to-r from-transparent via-primary to-transparent mt-8"
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          style={{ width: '80%', transformOrigin: 'center' }}
+          transition={{ duration: 1.0, delay: 1.0, ease: [0.25, 0.1, 0.25, 1] }}
+        />
+
+        {/* Sub-tagline (SEO enhanced but same visual style) */}
+        <motion.p
+          className="mt-3 text-sm sm:text-base text-gray-400 tracking-widest uppercase"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.0, delay: 1.6, ease: 'easeOut' }}
         >
-          <Button
-            onClick={scrollToServices}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base font-semibold rounded-lg transition-all duration-300"
-          >
-            Explore Our Services
-          </Button>
+Web Development • E-Commerce Development • SaaS Product Engineering • AI Integration • BPO & Remote Operations • Digital Transformation Services        </motion.p>
+
+        {/* CTA buttons */}
+        <motion.div
+          className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0, delay: 2.0, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <Button onClick={scrollToServices} size="lg">Explore Our Services</Button>
           <Button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary/10 px-8 py-6 text-base font-semibold rounded-lg"
+            variant="outline" size="lg"
           >
             Get in Touch
           </Button>
@@ -118,14 +80,21 @@ export function Hero() {
 
         {/* Scroll indicator */}
         <motion.div
-          variants={itemVariants}
-          className="mt-16 flex justify-center"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          className="mt-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.8, duration: 1.0 }}
         >
-          <div className="text-primary/60 text-sm">Scroll to explore</div>
+          <motion.div
+            animate={{ opacity: [0.5, 1, 0.5], y: [0, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            className="text-primary/60 text-xs font-medium tracking-[0.2em] uppercase"
+          >
+            Scroll to explore
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+      </div>
     </section>
   );
 }

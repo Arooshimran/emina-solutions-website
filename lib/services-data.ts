@@ -18,29 +18,30 @@ export const serviceCategories: ServiceCategory[] = [
       {
         id: "executive-va",
         icon: "Users",
-        title: "Executive Virtual Assistance",
-        description: "Dedicated remote support for founders and executives",
+        title: "Virtual Assistance",
+        description: "Dedicated remote executive and business support for founders and teams",
         items: [
-          "Operations & Admin Support",
+          "Operations & Administrative Support",
           "Client & Vendor Communication",
-          "Research & Reporting",
-          "Calendar Management"
+          "Research, Data & Reporting",
+          "Calendar & Workflow Management"
         ]
       },
       {
         id: "linkedin-management",
         icon: "Linkedin",
-        title: "LinkedIn Management",
-        description: "Strategic professional network growth and engagement",
+        title: "LinkedIn Management & Outreach",
+        description: "Strategic LinkedIn growth, lead generation, and outbound sales support",
         items: [
           "LinkedIn Growth & Prospecting",
-          "Strategic Social Media Marketing",
-          "Inbound / Outbound Sales Outreach",
-          "Email Marketing & Sequences"
+          "B2B Sales Outreach & Lead Generation",
+          "Inbound / Outbound Marketing Campaigns",
+          "Email Marketing & Automation Sequences"
         ]
       }
     ]
   },
+
   {
     category: "Creative Division",
     services: [
@@ -48,28 +49,28 @@ export const serviceCategories: ServiceCategory[] = [
         id: "content-creation",
         icon: "Palette",
         title: "Content Creation & Design",
-        description: "High-retention digital marketing assets and visual design",
+        description: "High-performing visual content and brand design for digital marketing",
         items: [
-          "Social Media Creatives",
-          "Brand Visual Design",
-          "Marketing Materials & Ad Creatives",
-          "Video Production & Editing"
+          "Social Media Content & Creatives",
+          "Brand Identity & Visual Design",
+          "Marketing Assets & Ad Creatives",
+          "Video Editing & Short-Form Content"
         ]
       },
       {
-        id: "podcast-production",
-        icon: "Mic2",
-        title: "Podcast Production",
-        description: "Professional audio content from concept to distribution",
+        id: "content-writing",
+        icon: "PenTool",
+        title: "Content Writing",
+        description: "SEO-optimized content for brands, websites, and marketing campaigns",
         items: [
-          "Production & Editing",
-          "Find & Contact Potential Guests",
-          "Publishing & Distribution",
-          "Thumbnails, Titles & Captions"
+          "Website Content Writing",
+          "Blog & SEO Articles",
+          "Product Descriptions & Landing Pages"
         ]
       }
     ]
   },
+
   {
     category: "Product Engineering",
     services: [
@@ -77,28 +78,41 @@ export const serviceCategories: ServiceCategory[] = [
         id: "saas-development",
         icon: "Code",
         title: "SaaS Development",
-        description: "Scalable platforms built with modern frameworks",
+        description: "Scalable SaaS platforms built with modern frameworks and cloud architecture",
         items: [
-          "Custom Development (Web & Mobile)",
-          "SRS Documentation",
-          "Conceptualization",
-          "Quality Assurance & Testing"
+          "Custom Web & Mobile App Development",
+          "System Architecture & SRS Documentation",
+          "Product Design & Concept Development",
+          "QA Testing & Deployment"
         ]
       },
       {
         id: "ai-integration",
         icon: "Zap",
-        title: "AI Integration & Modernization",
-        description: "Advanced AI solutions using LLMs and image generation",
+        title: "AI Integration & Automation",
+        description: "Advanced AI-powered solutions for automation and intelligent systems",
         items: [
-          "Custom LLM Implementation",
-          "Image Generation (Hugging Face, Replicate)",
-          "Legacy System Modernization",
-          "Deployment & Maintenance"
+          "Custom LLM Integration",
+          "AI Image & Content Generation (Hugging Face, Replicate)",
+          "Business Process Automation",
+          "Legacy System Modernization"
+        ]
+      },
+      {
+        id: "crm-automation",
+        icon: "Database",
+        title: "CRM & GoHighLevel Automation",
+        description: "CRM setup, funnel automation, and GoHighLevel (GHL) system integration",
+        items: [
+          "GoHighLevel Funnel Setup",
+          "CRM Automation & Pipeline Management",
+          "Lead Tracking & Nurturing Systems",
+          "Sales Funnel Optimization"
         ]
       }
     ]
   },
+
   {
     category: "Additional Services",
     services: [
@@ -106,24 +120,36 @@ export const serviceCategories: ServiceCategory[] = [
         id: "website-design",
         icon: "Layout",
         title: "Website Design & Development",
-        description: "Modern, responsive web experiences",
+        description: "Modern, responsive, and conversion-focused web experiences",
         items: [
-          "Website Design & UX Strategy",
-          "Custom Development",
-          "Performance Optimization",
-          "Ongoing Maintenance & Support"
+          "UI/UX Design Strategy",
+          "Custom Website Development",
+          "Performance Optimization (SEO + Speed)",
+          "Maintenance & Support"
+        ]
+      },
+      {
+        id: "seo-visibility",
+        icon: "Search",
+        title: "SEO & Digital Visibility",
+        description: "Search engine optimization and online growth strategy for businesses",
+        items: [
+          "On-Page & Technical SEO",
+          "Keyword Research & Strategy",
+          "Google Ranking Optimization",
+          "Brand Visibility & Growth Strategy"
         ]
       },
       {
         id: "business-consulting",
         icon: "TrendingUp",
         title: "Business Strategy & Consulting",
-        description: "Strategic guidance for growth and optimization",
+        description: "Strategic consulting for scaling operations and digital growth",
         items: [
-          "Market & Opportunity Analysis",
-          "Revenue & Growth Strategy",
-          "Go-To-Market Strategy",
-          "Personal Brand & Online Courses"
+          "Market & Competitor Analysis",
+          "Revenue Growth Strategy",
+          "Go-To-Market Planning",
+          "Digital Brand Positioning"
         ]
       }
     ]

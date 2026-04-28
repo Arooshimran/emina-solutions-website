@@ -1,14 +1,27 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css';
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+import { Chakra_Petch, Plus_Jakarta_Sans } from 'next/font/google';
+import { Navbar } from '@/components/ui/navbar';
+
+const chakra = Chakra_Petch({
+  subsets: ['latin'],
+  weight: ['700'],
+  style: ['normal', 'italic'],
+  variable: '--font-chakra',
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-jakarta',
+});
 
 export const metadata: Metadata = {
   title: 'Emina Solutions - BPO & Digital Transformation',
-  description: 'Strategic Business Process Outsourcing and digital transformation services. Staff augmentation, creative production, and custom software development.',
+  description:
+    'Strategic Business Process Outsourcing and digital transformation services. Staff augmentation, creative production, and custom software development.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -27,19 +40,29 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
-}
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="bg-background">
-      <body className="font-sans antialiased">
-        {children}
+      <body
+        className={`font-sans antialiased ${chakra.variable} ${jakarta.variable}`}
+      >
+        {/* Navbar shown on all pages */}
+        <Navbar />
+
+        {/* Page content (padding prevents overlap with fixed navbar) */}
+        <div className="pt-24">
+          {children}
+        </div>
+
+        {/* Analytics only in production */}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
-  )
+  );
 }
