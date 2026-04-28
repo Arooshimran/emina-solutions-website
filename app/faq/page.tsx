@@ -335,7 +335,7 @@ export default function FAQPage() {
               color: '#0a0a0e',
             }}
           >
-            Get in Touch ↗
+            Get in Touch
           </a>
         </motion.div>
       </div>
