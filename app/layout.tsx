@@ -19,12 +19,14 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Emina Solutions - BPO & Digital Transformation',
+  title: 'Emina Solutions | BPO, SaaS Development & AI Automation Agency',
   description:
-    'Strategic Business Process Outsourcing and digital transformation services. Staff augmentation, creative production, and custom software development.',
-  generator: 'v0.app',
+    'Emina Solutions is a modern business process outsourcing (BPO) and digital transformation agency. We specialize in staff augmentation, SaaS product engineering, AI integration, CRM automation, content writing, and scalable remote operations.',
   icons: {
     icon: [
+      {
+        url: '/emina_logo_cropped.png', // 👈 PRIMARY BRAND ICON (fallback)
+      },
       {
         url: '/icon-light-32x32.png',
         media: '(prefers-color-scheme: light)',
