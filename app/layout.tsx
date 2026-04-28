@@ -22,26 +22,12 @@ export const metadata: Metadata = {
   title: 'Emina Solutions | BPO, SaaS Development & AI Automation Agency',
   description:
     'Emina Solutions is a modern business process outsourcing (BPO) and digital transformation agency. We specialize in staff augmentation, SaaS product engineering, AI integration, CRM automation, content writing, and scalable remote operations.',
-  icons: {
-    icon: [
-      {
-        url: '/emina_logo_cropped.png', // 👈 PRIMARY BRAND ICON (fallback)
-      },
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+    icons: {
+      icon: [
+        { url: '/emina_logo_cropped.png' }, // primary
+      ],
+      apple: '/apple-icon.png',
+    },
 };
 
 export default function RootLayout({
